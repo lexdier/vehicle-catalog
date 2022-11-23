@@ -7,28 +7,30 @@ import Col from 'react-bootstrap/Col';
 export default function TheSubNavbar({ onFilter }: any) {
   return (
     <Navbar className="mt-5 mb-3" variant="light" expand="lg">
-          <Col lg="2">
-            <Button onClick={() => onFilter()}>
-              Filtros
-            </Button>
-          </Col>
-          <Col lg="9">
-              <sppan>Comprar</sppan>
-          </Col>
-          <Col lg="1">
-            <Nav>
-              <NavDropdown title="Link" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">Ordenar</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="/">
-                  Something else here
-                </NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-          </Col>
+      <Col lg="2">
+        <Button onClick={() => onFilter()}>
+          Filtros
+        </Button>
+      </Col>
+      <Col lg="9">
+        <span>
+          Comprar
+        </span>
+      </Col>
+      <Col lg="1">
+        <Nav>
+          <NavDropdown title="Ornedar" id="navbarScrollingDropdown">
+            <NavDropdown.Item href="#action3">Something</NavDropdown.Item>
+            <NavDropdown.Item href="#action4">
+              Another action
+            </NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="/">
+              Something else here
+            </NavDropdown.Item>
+          </NavDropdown>
+        </Nav>
+      </Col>
     </Navbar>
   );
 }
