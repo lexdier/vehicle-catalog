@@ -2,11 +2,11 @@ import CarItem from '../components/CarItem';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Spinner from 'react-bootstrap/Spinner';
-import TheSidebar from '../components/TheSidebar';
-import Container from 'react-bootstrap/Container';
+import TheFilterLayout from '../components/TheFilterLayout';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 axios.defaults.baseURL = 'https://api.merkaly.io';
 axios.defaults.headers.common.identity = 'elcloset';
 
@@ -14,7 +14,8 @@ function showLoading(loading: boolean) {
   return (
     loading && (<Spinner animation="border" role="status">
       <span className="visually-hidden">
-        Loading...</span>
+        Loading...
+      </span>
     </Spinner>)
   );
 }
@@ -44,26 +45,19 @@ export default function () {
   };
 
   return (
-    <>
-      {showLoading(loading)}
-      <Container>
-        <Row>
+    <TheFilterLayout>
+      <Row>
+        {users.map((user) =>
           <Col lg="4">
-            <TheSidebar />
-          </Col>
-          <Col lg="8">
-            <Row>
-              {users.map((user) =>
-                <Col lg="4">
-                  <CarItem key={user.id} />
-                </Col>,
-              )}
-            </Row>
-          </Col>
-        </Row>
-      </Container>
-
-    </>
-
+            <CarItem key={user.id} />
+          </Col>,
+        )}
+      </Row>
+      <Row>
+        <Col>
+          {showLoading(loading)}
+        </Col>
+      </Row>
+    </TheFilterLayout>
   );
 }
