@@ -3,14 +3,15 @@ import Card from 'react-bootstrap/Card';
 
 export default function CarItem() {
   return (
-    <Card>
+    <Card className="m-1">
       <Card.Img variant="top"
                 src="https://revistacarro.com.br/wp-content/uploads/2022/06/Icona_5.jpg" />
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title>Car Title</Card.Title>
+        <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          <Card.Title className="text-primary" >$5000</Card.Title>
+          <Card.Subtitle className="mb-2 text-muted text-decoration-line-through">$6000</Card.Subtitle>
         </Card.Text>
         <Button variant="primary">Go somewhere</Button>
       </Card.Body>
