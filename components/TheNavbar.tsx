@@ -9,7 +9,7 @@ export default function TheNavbar() {
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container>
-        <Navbar.Brand href="#">Sell Cars</Navbar.Brand>
+        <Navbar.Brand href="/">Sell Cars</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
