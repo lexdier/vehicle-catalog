@@ -1,5 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Link from 'next/link';
+
 
 export default function CarItem() {
   return (
@@ -10,10 +12,14 @@ export default function CarItem() {
         <Card.Title>Car Title</Card.Title>
         <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
         <Card.Text>
-          <Card.Title className="text-primary" >$5000</Card.Title>
+          <Card.Title className="text-primary">$5000</Card.Title>
           <Card.Subtitle className="mb-2 text-muted text-decoration-line-through">$6000</Card.Subtitle>
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Link href="/BuyCar">
+          <Button variant="primary">
+            Buy This Car
+          </Button>
+        </Link>
       </Card.Body>
     </Card>
   );

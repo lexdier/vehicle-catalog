@@ -63,8 +63,6 @@ export default function TheSidebar() {
           Lorem ipsum dolor sit amet
         </Accordion.Body>
       </Accordion.Item>
-
-
     </Accordion>
   );
 }

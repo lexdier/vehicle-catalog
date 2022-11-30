@@ -5,7 +5,6 @@ import Spinner from 'react-bootstrap/Spinner';
 import TheFilterLayout from '../components/TheFilterLayout';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 axios.defaults.baseURL = 'https://api.merkaly.io';
 axios.defaults.headers.common.identity = 'elcloset';
@@ -32,8 +31,8 @@ export default function () {
     setLoading(true);
     axios.get('/search/inventory_products')
       .then(function ({ data }) {
-        console.log(data.hits);
         setUsers(data.hits);
+
       })
       .catch(function (e) {
         // handle error

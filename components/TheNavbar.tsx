@@ -4,12 +4,16 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+//import Login from './Login';
+import Link from 'next/link';
 
 export default function TheNavbar() {
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container>
-        <Navbar.Brand href="/">Sell Cars</Navbar.Brand>
+        <Navbar.Brand>
+          <Link href="/">Sell Cars</Link>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -39,7 +43,7 @@ export default function TheNavbar() {
             />
             <Button variant="outline-success">Search</Button>
           </Form>
-          <Button className='ms-3'>Login</Button>
+          <Button className="ms-3">Login</Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>
