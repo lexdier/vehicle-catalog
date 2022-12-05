@@ -9,10 +9,10 @@ import Link from 'next/link';
 
 export default function TheNavbar() {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
+    <Navbar variant="dark" expand="lg" className="border mt-3">
       <Container>
         <Navbar.Brand>
-          <Link href="/">Sell Cars</Link>
+          <Link href="/" className="text-decoration-none text-reset">Home</Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
