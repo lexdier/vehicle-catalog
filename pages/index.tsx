@@ -19,7 +19,7 @@ function showLoading(loading: boolean) {
   );
 }
 
-export default function () {
+export default function User() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -47,8 +47,8 @@ export default function () {
     <TheFilterLayout>
       <Row>
         {users.map((user: any) =>
-          <Col lg="4">
-            <CarItem key={user.id} />
+          <Col lg="4" key={user.id}>
+            <CarItem />
           </Col>,
         )}
       </Row>
