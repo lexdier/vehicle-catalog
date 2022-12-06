@@ -19,7 +19,7 @@ export default function TheSubNavbar({ onFilter }: any) {
       </Col>
       <Col lg="1">
         <Nav variant="danger">
-          <NavDropdown menuVariant="dark" title="Filter" id="navbarScrollingDropdown">
+          <NavDropdown title="Filter" id="navbarScrollingDropdown">
             <NavDropdown.Item href="#action3">
               Something
             </NavDropdown.Item>

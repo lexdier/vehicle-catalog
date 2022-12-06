@@ -17,10 +17,10 @@ export default function TheFilterLayout({ children }: any) {
         <TheSubNavbar onFilter={showAlert} />
       </Row>
       <Row>
-        <Col lg="4">
+        <Col lg="auto">
           {showSidebar && (<TheSidebar />)}
         </Col>
-        <Col lg="8" className="d-flex justify-content-center align-items-center">
+        <Col lg className="d-flex justify-content-center align-items-center">
           {children}
         </Col>
       </Row>
