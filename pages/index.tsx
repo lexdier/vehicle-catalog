@@ -46,7 +46,7 @@ export default function () {
   return (
     <TheFilterLayout>
       <Row>
-        {users.map((user) =>
+        {users.map((user: any) =>
           <Col lg="4">
             <CarItem key={user.id} />
           </Col>,

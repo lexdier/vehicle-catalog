@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 export default function TheNavbar() {
   return (
-    <Navbar variant="dark" expand="lg" className="border mt-3">
+    <Navbar expand="lg" className="border border-dark mt-3">
       <Container>
         <Navbar.Brand>
           <Link href="/" className="text-decoration-none text-reset">Home</Link>
